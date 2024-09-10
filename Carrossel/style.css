@@ -1,0 +1,55 @@
+.carrossel {
+  background-color: rgba(0, 0, 255, 0);
+  overflow: hidden;
+  display: flex;
+  align-items: left;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0);
+  width: fit-content;
+  animation: circulate 30s linear infinite;
+}
+
+.container-reverse {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 128, 0, 0);
+  width: fit-content;
+  animation: circulate-reverse 60s linear infinite;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 188px;
+  height: 96px;
+  background-color: rgba(232, 232, 240, 1);
+  font-size: 2em;
+  font-weight: 700;
+  font-family: Courier;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+@keyframes circulate {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes circulate-reverse {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
